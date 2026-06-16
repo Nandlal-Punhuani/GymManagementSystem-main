@@ -1,0 +1,75 @@
+# Gym Management System - Dependencies
+
+## Java Requirements
+- Java Development Kit (JDK) 8 or higher
+- Java Runtime Environment (JRE) 8 or higher
+
+## External Libraries (JAR files)
+
+### MySQL JDBC Driver
+- File: mysql-connector-java-8.0.33.jar (or latest version)
+- Download: https://dev.mysql.com/downloads/connector/j/
+- Purpose: Database connectivity
+- License: GPL v2 with FOSS License Exception
+
+### Date Components
+- Built-in Java Swing JSpinner with SpinnerDateModel
+- No external dependencies required
+- Purpose: Date picker component for financial records
+
+## Database Requirements
+
+### MySQL Server
+- Version: MySQL 5.7 or higher (recommended: MySQL 8.0)
+- Download: https://dev.mysql.com/downloads/mysql/
+- Purpose: Data storage and management
+
+### Database Setup
+1. Create database: gym_management
+2. Import schema: gym_database.sql
+3. Default credentials: root/password (configure as needed)
+
+## Installation Instructions
+
+1. Install Java JDK 8+
+2. Install MySQL Server
+3. Download required JAR files:
+   - mysql-connector-java-8.0.33.jar
+4. Place JAR files in project directory
+5. Import database schema using gym_database.sql
+6. Update database credentials in DatabaseConnection.java
+7. Compile: javac -cp ".;*.jar" *.java
+8. Run: java -cp ".;*.jar" GymManagementSystem
+
+## Alternative: Using compile_and_run.bat
+- Double-click compile_and_run.bat for automated compilation and execution
+- Ensure JAR files are in the same directory
+
+## System Requirements
+- Operating System: Windows 7/8/10/11, macOS, or Linux
+- RAM: Minimum 512MB (recommended: 1GB+)
+- Storage: 50MB free space
+- Display: 1024x768 resolution or higher
+
+## Network Requirements
+- Local network access to MySQL server
+- Default MySQL port: 3306
+
+## Development Environment
+- IDE: Any Java IDE (Eclipse, IntelliJ IDEA, NetBeans, VS Code)
+- Build Tool: Manual compilation (no Maven/Gradle required)
+- Version Control: Git (optional)
+
+## Troubleshooting
+
+### Common Issues:
+1. ClassNotFoundException: Ensure JAR files are in classpath
+2. SQLException: Check MySQL server status and credentials
+3. GUI not displaying: Verify Java Swing support
+4. Date picker issues: Verify Java Swing components are working properly
+
+### Compatibility Notes:
+- Tested on Java 8, 11, and 17
+- Compatible with MySQL 5.7, 8.0
+- Works on Windows, macOS, and Linux
+- Requires desktop environment (not suitable for headless servers)

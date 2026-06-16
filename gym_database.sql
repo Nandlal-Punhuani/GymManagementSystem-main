@@ -1,0 +1,1 @@
+SELECT * FROM gym_management.admin;
